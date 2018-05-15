@@ -1,0 +1,63 @@
+#Author: Cody Azevedo
+#Language: Python v2.7
+#Dictionary of all attractions
+#Attributes include: park, area, thrill level, wait time
+
+ATTRACTIONS = {
+
+		#Disneyland Resort
+            "Alice in Wonderland":{'Disneyland', 'Fantasyland', 'Slow', 'Medium'},
+            "Astro Orbitor":{'Disneyland', 'Tomorrowland', 'Spinning', 'Short'},
+            "Autopia":{'Disneyland', 'Tomorrowland', 'Slow', 'Short'},
+            "Big Thunder Mtn Railroad":{'Disneyland', 'Frontierland', 'Fast', 'Medium'},
+            "Buzz Lightyear Astro Blasters":{'Disneyland', 'Tomorrowland', 'Slow', 'Short'},
+            "Casey Jr Circus Train":{'Disneyland', 'Fantasyland', 'Slow', 'Medium'},
+            "Disneyland Monorail":{'Disneyland', 'Tomorrowland', 'Getting Around', 'Short'},
+            "Disneyland RR Main Street":{'Disneyland', 'Main Street USA', 'Getting Around', 'Medium'},
+            "Disneyland RR Toontown":{'Disneyland', 'Mickey\'s Toontown', 'Getting Around', 'Short'},
+            "Disneyland RR New Orleans":{'Disneyland', 'New Orleans Square', 'Getting Around', 'Short'},
+            "Dumbo the Flying Elephant":{'Disneyland', 'Fantasyland', 'Spinning', 'Short'},
+            "Enchanted Tiki Room":{'Disneyland', 'Adventureland', 'Show', 'Medium'},
+            "Finding Nemo Sub Voyage":{'Disneyland', 'Tomorrowland', 'Slow', 'Long'},
+            "Gadget\'s Go Coaster":{'Disneyland', 'Mickey\'s Toontown', 'Fast', 'Short'},
+            "Haunted Mansion Holiday":{'Disneyland', 'New Orleans Square', 'Slow', 'Medium'},
+            "Hyperspace Mountain":{'Disneyland', 'Tomorrowland', 'Fast', 'Very Long'},
+            "Indiana Jones Adventure":{'Disneyland', 'Adventureland', 'Fast', 'Medium'},
+            "It\'s a Small World Holiday":{'Disneyland', 'Fantasyland', 'Slow', 'Short'},
+            "Jingle Cruise":{'Disneyland', 'Adventureland', 'Water', 'Medium'},
+            "King Arthur Carrousel":{'Disneyland', 'Fantasyland', 'Spinning', 'Medium'},
+            "Mad Tea Party":{'Disneyland', 'Fantasyland', 'Spinning', 'Short'},
+            "Main Street Vehicles":{'Disneyland', 'Main Street USA', 'Getting Around', 'Short'},
+            "Winnie the Pooh":{'Disneyland', 'Critter Country', 'Slow', 'Short'},
+            "Mark Twain Riverboat":{'Disneyland', 'Frontierland', 'Slow', 'Medium'},
+            "Matterhorn Bobsleds":{'Disneyland', 'Fantasyland', 'Fast', 'Long'},
+            "Mr. Toad\'s Wild Ride":{'Disneyland', 'Fantasyland', 'Slow', 'Short'},
+            "Peter Pan\'s Flight":{'Disneyland', 'Fantasyland', 'Slow', 'Long'},
+            "Pinocchio\'s Daring Journey":{'Disneyland', 'Fantasyland', 'Slow', 'Short'},
+            "Pirates of the Caribbean":{'Disneyland', 'New Orleans Square', 'Water', 'Short'},
+            "Roger Rabbit\'s Car Toon Spin":{'Disneyland', 'Mickey\'s Toontown', 'Spinning', 'Medium'},
+            "Splash Mountain":{'Disneyland', 'Critter Country', 'Water', 'Long'},
+            "Star Tours":{'Disneyland', 'Tomorrowland', 'Show', 'Medium'},
+            "Tarzan\'s Treehouse":{'Disneyland', 'Adventureland', 'Slow', 'Short'},
+
+            #Disney California Adventure
+            "California Screamin\'":{'DCA', 'Paradise Pier', 'Fast', 'Medium'},
+            "Flik\'s Flyers":{'DCA', 'A Bug\'s Land', 'Spinning', 'Short'},
+            "Golden Zephyr":{'DCA', 'Paradise Pier', 'Spinning', 'Short'},
+            "Goofy\'s Sky School":{'DCA', 'Paradise Pier', 'Fast', 'Short'},
+            "Grizzly River Run":{'DCA', 'Grizzly Peak', 'Water', 'Medium'},
+            "Heimlich\'s Chew \n Chew Train":{'DCA', 'A Bug\'s Land', 'Slow', 'Short'},
+            "Jumpin\' Jellyfish":{'DCA', 'Paradise Pier', 'Slow', 'Short'},
+            "Luigi\'s Flying Tires":{'DCA', 'Cars Land', 'Slow', 'Medium'},
+            "King Triton\'s Carousel":{'DCA', 'Paradise Pier', 'Spinning', 'Medium'},
+            "Ariel\'s Undersea Adventure":{'DCA', 'Paradise Pier', 'Slow', 'Medium'},
+            "Mater\'s Junkyard Jamboree":{'DCA', 'Cars Land', 'Spinning', 'Short'},
+            "Mickey\'s Fun Wheel":{'DCA', 'Paradise Pier', 'Slow', 'Long'},
+            "Monsters, Inc.":{'DCA', 'Hollywood Land', 'Slow', 'Medium'},
+            "Red Car Trolley":{'DCA', 'Buena Vista Street', 'Getting Around', 'Short'},
+            "Radiator Springs Racers":{'DCA', 'Cars Land', 'Fast', 'Very Long'},
+            "Silly Symphony Swings":{'DCA', 'Paradise Pier', 'Spinning', 'Short'},
+            "Soarin\' Over California":{'DCA', 'Grizzly Peak', 'Slow', 'Medium'},
+            "Toy Story Midway Mania":{'DCA', 'Paradise Pier', 'Slow', 'Long'},
+            "Twilight Zone Tower of Terror":{'DCA', 'Hollywood Land', 'Fast', 'Medium'},
+        }

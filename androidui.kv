@@ -1,0 +1,1023 @@
+##Main screen, prompts park location
+<ParkScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'parkbackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 400
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Welcome to the Disneyland Ride Selector!"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "First, start by picking your park"
+
+        Button:
+            text: 'Disneyland'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'disneylandareascreen'
+            on_press: app.setParkDisneyland()
+
+        Button:
+            text: 'Disney California Adventure'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'dcaareascreen'
+            on_press: app.setParkDCA()
+
+##Disneyland Area screen, asks area to visit
+<DisneylandAreaScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'areabackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        padding: 60
+        size_hint_y: .70
+
+        Label:
+            color: 0,0,0,1
+            text: "Next, which area would you like to visit?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "Different lands have different themed rides!"
+
+        Button:
+            text: 'Main Street USA'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'mainstreetscreen'
+            on_press: app.setAreaMainStreet()
+
+        Button:
+            text: 'Tomorrowland'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'tomorrowlandscreen'
+            on_press: app.setAreaTomorrowland()
+
+        Button:
+            text: 'Fantasyland'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'fantasylandscreen'
+            on_press: app.setAreaFantasyland()
+
+        Button:
+            text: 'Mickey\'s Toontown'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'toontownscreen'
+            on_press: app.setAreaMickeysToontown()
+
+        Button:
+            text: 'Frontierland'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'frontierlandscreen'
+            on_press: app.setAreaFrontierland()
+
+        Button:
+            text: 'Critter Country'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'crittercountryscreen'
+            on_press: app.setAreaCritterCountry()
+
+        Button:
+            text: 'New Orleans Square'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'neworleansscreen'
+            on_press: app.setAreaNewOrleans()
+
+        Button:
+            text: 'Adventureland'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'adventurelandscreen'
+            on_press: app.setAreaAdventureland()
+
+##DCA Area screen, asks area to visit
+<DCAAreaScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'areabackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        padding: 100
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Next, which area would you like to visit?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "Different lands have different themed rides!"
+
+        Button:
+            text: 'Buena Vista Street'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'buenavistastreetscreen'
+            on_press: app.setAreaBuenaVistaStreet()
+
+        Button:
+            text: 'Paradise Pier'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'paradisepierscreen'
+            on_press: app.setAreaParadisePier()
+
+        Button:
+            text: 'Grizzly Peak'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'grizzlypeakscreen'
+            on_press: app.setAreaGrizzlyPeak()
+
+        Button:
+            text: 'Hollywood Land'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'hollywoodlandscreen'
+            on_press: app.setAreaHollywoodLand()
+
+        Button:
+            text: 'A Bug\'s Land'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'abugslandscreen'
+            on_press: app.setAreaABugsLand()
+
+        Button:
+            text: 'Cars Land'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'carslandscreen'
+            on_press: app.setAreaCarsLand()
+
+<MainStreetScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 400
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Getting Around'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortmediumwaitscreen'
+            on_press: app.setTypeGettingAround()
+
+
+<ShortWaitScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'waitbackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 400
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "How long do you feel like waiting?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "Wait times are based on average"
+
+        Button:
+            text: 'Short (5-15 minutes)'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'finalscreen'
+            on_press: app.setTimeShort()
+            on_release: app.determineRide()
+
+<MediumWaitScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'waitbackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 400
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "How long do you feel like waiting?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "Wait times are based on average"
+
+        Button:
+            text: 'Medium (30-45 minutes)'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'finalscreen'
+            on_press: app.setTimeMedium()
+            on_release: app.determineRide()
+
+<ShortLongWaitScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'waitbackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 400
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "How long do you feel like waiting?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "Wait times are based on average"
+
+        Button:
+            text: 'Short (5-15 minutes)'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'finalscreen'
+            on_press: app.setTimeShort()
+            on_release: app.determineRide()
+        Button:
+            text: 'Long (45-60 minutes)'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'finalscreen'
+            on_press: app.setTimeLong()
+            on_release: app.determineRide()
+
+<ShortMediumWaitScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'waitbackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 400
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "How long do you feel like waiting?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "Wait times are based on average"
+
+        Button:
+            text: 'Short (5-15 minutes)'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'finalscreen'
+            on_press: app.setTimeShort()
+            on_release: app.determineRide()
+        Button:
+            text: 'Medium (30-45 minutes)'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'finalscreen'
+            on_press: app.setTimeMedium()
+            on_release: app.determineRide()
+
+<ShortMediumLongWaitScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'waitbackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 400
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "How long do you feel like waiting?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "Wait times are based on average"
+
+        Button:
+            text: 'Short (5-15 minutes)'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'finalscreen'
+            on_press: app.setTimeShort()
+            on_release: app.determineRide()
+        Button:
+            text: 'Medium (30-45 minutes)'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'finalscreen'
+            on_press: app.setTimeMedium()
+            on_release: app.determineRide()
+        Button:
+            text: 'Long (45-60 minutes)'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'finalscreen'
+            on_press: app.setTimeLong()
+            on_release: app.determineRide()
+
+<LongWaitScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'waitbackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 400
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "How long do you feel like waiting?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "Wait times are based on average"
+
+        Button:
+            text: 'Long (45-60 minutes)'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'finalscreen'
+            on_press: app.setTimeLong()
+            on_release: app.determineRide()
+
+<VeryLongWaitScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'waitbackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 400
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "How long do you feel like waiting?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "Wait times are based on average"
+
+        Button:
+            text: 'Very Long (60+ minutes)'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'finalscreen'
+            on_press: app.setTimeVeryLong()
+            on_release: app.determineRide()
+
+<TomorrowlandScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 200
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Slow'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortlongwaitscreen'
+            on_press: app.setTypeSlow()
+        Button:
+            text: 'Fast'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'verylongwaitscreen'
+            on_press: app.setTypeFast()
+        Button:
+            text: 'Spinning'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortwaitscreen'
+            on_press: app.setTypeSpinning()
+        Button:
+            text: 'Getting Around'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortwaitscreen'
+            on_press: app.setTypeGettingAround()
+
+<FantasylandScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 200
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Slow'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortmediumlongwaitscreen'
+            on_press: app.setTypeSlow()
+        Button:
+            text: 'Spinning'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortmediumwaitscreen'
+            on_press: app.setTypeSpinning()
+        Button:
+            text: 'Fast'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'longwaitscreen'
+            on_press: app.setTypeFast()
+
+<ToontownScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 200
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Spinning'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'mediumwaitscreen'
+            on_press: app.setTypeSpinning()
+        Button:
+            text: 'Fast'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortwaitscreen'
+            on_press: app.setTypeFast()
+        Button:
+            text: 'Getting Around'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortwaitscreen'
+            on_press: app.setTypeGettingAround()
+            on_release: app.printRide()
+
+<FrontierlandScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 400
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Slow'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'mediumwaitscreen'
+            on_press: app.setTypeSlow()
+        Button:
+            text: 'Fast'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'mediumwaitscreen'
+            on_press: app.setTypeFast()
+
+<CritterCountryScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 400
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Slow'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortwaitscreen'
+            on_press: app.setTypeSlow()
+        Button:
+            text: 'Water'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'longwaitscreen'
+            on_press: app.setTypeWater()
+
+<NewOrleansScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 200
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Slow'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'mediumwaitscreen'
+            on_press: app.setTypeSlow()
+        Button:
+            text: 'Water'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortwaitscreen'
+            on_press: app.setTypeWater()
+        Button:
+            text: 'Getting Around'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortwaitscreen'
+            on_press: app.setTypeGettingAround()
+
+<AdventurelandScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 200
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Slow'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortwaitscreen'
+            on_press: app.setTypeSlow()
+        Button:
+            text: 'Fast'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'mediumwaitscreen'
+            on_press: app.setTypeFast()
+        Button:
+            text: 'Water'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'mediumwaitscreen'
+            on_press: app.setTypeWater()
+        Button:
+            text: 'Show'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'mediumwaitscreen'
+            on_press: app.setTypeShow()
+
+<BuenaVistaStreetScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 200
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Getting Around'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortwaitscreen'
+            on_press: app.setTypeGettingAround()
+
+<ParadisePierScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 200
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Slow'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortmediumlongwaitscreen'
+            on_press: app.setTypeSlow()
+        Button:
+            text: 'Spinning'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortmediumwaitscreen'
+            on_press: app.setTypeSpinning()
+        Button:
+            text: 'Fast'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortmediumwaitscreen'
+            on_press: app.setTypeFast()
+
+<GrizzlyPeakScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 200
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Slow'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'mediumwaitscreen'
+            on_press: app.setTypeSlow()
+        Button:
+            text: 'Water'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'mediumwaitscreen'
+            on_press: app.setTypeWater()
+
+<HollywoodlandScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 200
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Slow'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'mediumwaitscreen'
+            on_press: app.setTypeSlow()
+        Button:
+            text: 'Fast'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'mediumwaitscreen'
+            on_press: app.setTypeFast()
+
+<ABugslandScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 200
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Slow'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortwaitscreen'
+            on_press: app.setTypeSlow()
+        Button:
+            text: 'Spinning'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortwaitscreen'
+            on_press: app.setTypeSpinning()
+
+<CarslandScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'typebackground.png'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 200
+        size_hint_y: .75
+
+        Label:
+            color: 0,0,0,1
+            text: "Which type of ride would you like?"
+            font_size: 50
+        Label:
+            color: 0,0,0,1
+            font_size: 50
+            text: "These are the types available in the area!"
+
+        Button:
+            text: 'Slow'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'mediumwaitscreen'
+            on_press: app.setTypeSlow()
+        Button:
+            text: 'Spinning'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'shortwaitscreen'
+            on_press: app.setTypeSpinning()
+        Button:
+            text: 'Fast'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'verylongwaitscreen'
+            on_press: app.setTypeFast()
+
+<FinalScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'background.png'
+        Rectangle:
+            pos: 190, 684
+            size: 700, 440
+            source: app.ridepicture
+
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 200
+        size_hint_y: .90
+
+        Label:
+            color: 0,0,0,1
+            text: "You should ride"
+            font_size: 75
+        Label:
+            color: 0,0,0,1
+            text: app.finalride
+            font_size: 75
+        Button:
+            text: 'Choose Another Ride'
+            size_hint: None, None
+            size: 1000, 125
+            pos_hint: {'center_x' : .5}
+            on_press: root.manager.current = 'parkscreen'
+            on_release: root.resetRide()

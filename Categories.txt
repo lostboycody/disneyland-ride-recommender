@@ -1,0 +1,15 @@
+Categories:
+
+Park: Disneyland, California Adventure
+Disneyland Areas: Main Street USA, Tomorrowland, Fantasyland, Mickeys Toontown, Frontierland, Critter Country, New Orleans Square and Adventureland
+DCA Areas: Paradise Pier, Grizzly Peak, Hollywood Land, A Bugs Land, Cars Land, Buena Vista Street
+Thrill level: Slow, Fast, Getting Around, Spinning, Show, Water
+Wait Time: Short, Medium, Long, Very Long
+
+
+A lot of:
+Fantasyland Slow Short
+Fantasyland Slow Medium
+Fantasyland 
+
+672 possible combinations, only 49 rides/attractions, how to get past that?

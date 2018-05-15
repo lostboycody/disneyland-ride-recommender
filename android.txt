@@ -1,0 +1,3 @@
+title=Disneyland Ride Recommender
+author=Cody Azevedo
+orientation=<portrait|landscape>
